@@ -28,6 +28,7 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.06;margin:0}
+.hero-copy h1{text-shadow:0 3px 22px rgba(12,20,16,.6),0 1px 4px rgba(12,20,16,.45)}
 p{margin:0 0 1.1em}
 a{color:inherit}
 img{display:block;width:100%;height:100%;object-fit:cover}
@@ -51,15 +52,20 @@ nav a:hover,nav a:focus-visible{opacity:1;text-decoration:underline;text-underli
 @keyframes slowpan{from{transform:scale(1.08)}to{transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){.hero>img{animation:none}}
 .hero::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(18,28,24,.62) 0%,rgba(18,28,24,.20) 18%,rgba(22,35,30,0) 36%,rgba(22,35,30,.32) 62%,rgba(22,35,30,.90) 100%)}
-.hero-copy{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:0 28px 7vh;color:var(--birch)}
-.hero-copy .inner{max-width:1180px;margin:0 auto}
-.hero-copy h1{font-size:clamp(2.6rem,7vw,5.4rem);letter-spacing:-.015em;max-width:16ch}
-.hero-copy h1 span{display:block;font-size:.44em;letter-spacing:.005em;color:var(--creek);margin-top:.32em}
-.hero-logo{width:clamp(118px,15vw,176px);height:auto;margin-bottom:22px;
-  filter:drop-shadow(0 6px 26px rgba(10,16,13,.6))}
-.hero-copy p{margin:20px 0 0;max-width:40ch;font-size:clamp(1rem,1.6vw,1.18rem);color:#D6DDD7}
-.hero-where{font-size:.85rem;letter-spacing:.06em;color:var(--creek);margin-bottom:18px}
+  background:linear-gradient(180deg,rgba(18,28,24,.60) 0%,rgba(18,28,24,.18) 16%,rgba(22,35,30,.10) 34%,rgba(22,35,30,.48) 66%,rgba(22,35,30,.93) 100%)}
+.hero-copy{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:0 28px 6vh;color:var(--birch)}
+@media(max-height:760px){.hero-logo{width:clamp(120px,15vw,180px);margin-bottom:16px}}
+.hero-copy .inner{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;
+  align-items:center;text-align:center}
+.hero-copy h1{font-size:clamp(2.5rem,6.4vw,5rem);letter-spacing:-.015em;max-width:18ch}
+.hero-copy h1 span{display:block;font-size:.44em;letter-spacing:.005em;color:#A8D0C5;margin-top:.32em;
+  text-shadow:0 2px 16px rgba(12,20,16,.75)}
+.hero-logo{width:clamp(168px,21vw,268px);height:auto;margin:0 auto 26px;
+  filter:drop-shadow(0 8px 34px rgba(10,16,13,.72))}
+.hero-copy p{margin:20px auto 0;max-width:42ch;font-size:clamp(1rem,1.6vw,1.18rem);color:#E2E8E3;
+  text-shadow:0 1px 12px rgba(12,20,16,.7),0 1px 3px rgba(12,20,16,.55)}
+.hero-where{font-size:.9rem;letter-spacing:.07em;color:#CFE3DC;margin-bottom:20px;
+  text-shadow:0 1px 10px rgba(12,20,16,.85),0 1px 3px rgba(12,20,16,.7)}
 
 /* ---- sections ---- */
 section{padding:clamp(68px,10vw,132px) 0}
